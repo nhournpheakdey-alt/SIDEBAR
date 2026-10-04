@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Sidebar Prototype</title>
 
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #111;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 70px;
+      padding: 10px 6px;
+      background: #222;
+      border-radius: 18px 0 0 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.5);
+      text-align: center;
+    }
+
+    button {
+      width: 58px;
+      height: 58px;
+      margin: 5px 0;
+      border: 0;
+      border-radius: 14px;
+      background: #333;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    button:active {
+      transform: scale(.94);
+    }
+
+    .close {
+      background: #b22;
+    }
+
+    .title {
+      color: white;
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="title">SIDEBAR</div>
+
+    <button onclick="alert('TikTok button')">
+      TikTok
+    </button>
+
+    <button onclick="alert('YouTube button')">
+      YouTube
+    </button>
+
+    <button onclick="alert('Game tools')">
+      Tools
+    </button>
+
+    <button class="close" onclick="document.querySelector('.sidebar').style.display='none'">
+      X
+    </button>
+  </div>
+
+</body>
+</html>
